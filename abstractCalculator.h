@@ -1,0 +1,14 @@
+//
+// Created by manue on 15.05.2020.
+//
+
+#ifndef CALCULATOR_TINF19B3_ABSTRACTCALCULATOR_H
+#define CALCULATOR_TINF19B3_ABSTRACTCALCULATOR_H
+
+
+class abstractCalculator {
+
+};
+
+
+#endif //CALCULATOR_TINF19B3_ABSTRACTCALCULATOR_H
