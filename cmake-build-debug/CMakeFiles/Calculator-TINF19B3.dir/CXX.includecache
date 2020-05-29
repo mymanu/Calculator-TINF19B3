@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/manue/CLionProjects/Calculator-TINF19B3/abstractCalculator.cpp
+abstractCalculator.h
+C:/Users/manue/CLionProjects/Calculator-TINF19B3/abstractCalculator.h
+string
+-
+iostream
+-
+
+C:/Users/manue/CLionProjects/Calculator-TINF19B3/abstractCalculator.h
+string
+-
+iostream
+-
+
