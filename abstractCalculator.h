@@ -12,3 +12,4 @@ class abstractCalculator {
 
 
 #endif //CALCULATOR_TINF19B3_ABSTRACTCALCULATOR_H
+
