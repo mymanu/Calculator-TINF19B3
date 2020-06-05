@@ -7,7 +7,9 @@
 
 
 class Calculation {
-
+public:
+    Calculation(double x, double y);
+    Calculation(double  x);
 };
 
 
