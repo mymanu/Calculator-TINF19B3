@@ -1,3 +1,3 @@
-C:/Users/manue/CLionProjects/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/Calculator-TINF19B3.dir
-C:/Users/manue/CLionProjects/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/manue/CLionProjects/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/Calculator-TINF19B3.dir
