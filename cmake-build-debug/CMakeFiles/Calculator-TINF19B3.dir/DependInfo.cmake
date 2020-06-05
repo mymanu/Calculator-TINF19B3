@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/suppe/dh/Calculator-TINF19B3/app/classes/Calculation.cpp" "/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o"
-  "/home/suppe/dh/Calculator-TINF19B3/main.cpp" "/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o"
+  "C:/Users/manue/CLionProjects/Calculator-TINF19B3/app/classes/Calculation.cpp" "C:/Users/manue/CLionProjects/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj"
+  "C:/Users/manue/CLionProjects/Calculator-TINF19B3/main.cpp" "C:/Users/manue/CLionProjects/Calculator-TINF19B3/cmake-build-debug/CMakeFiles/Calculator-TINF19B3.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
