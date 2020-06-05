@@ -149,6 +149,33 @@ app/classes/Calculation.cpp.s:
 	$(MAKE) -f CMakeFiles\Calculator-TINF19B3.dir\build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.s
 .PHONY : app/classes/Calculation.cpp.s
 
+app/classes/Logic.obj: app/classes/Logic.cpp.obj
+
+.PHONY : app/classes/Logic.obj
+
+# target to build an object file
+app/classes/Logic.cpp.obj:
+	$(MAKE) -f CMakeFiles\Calculator-TINF19B3.dir\build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj
+.PHONY : app/classes/Logic.cpp.obj
+
+app/classes/Logic.i: app/classes/Logic.cpp.i
+
+.PHONY : app/classes/Logic.i
+
+# target to preprocess a source file
+app/classes/Logic.cpp.i:
+	$(MAKE) -f CMakeFiles\Calculator-TINF19B3.dir\build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.i
+.PHONY : app/classes/Logic.cpp.i
+
+app/classes/Logic.s: app/classes/Logic.cpp.s
+
+.PHONY : app/classes/Logic.s
+
+# target to generate assembly for a file
+app/classes/Logic.cpp.s:
+	$(MAKE) -f CMakeFiles\Calculator-TINF19B3.dir\build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.s
+.PHONY : app/classes/Logic.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -188,6 +215,9 @@ help:
 	@echo ... app/classes/Calculation.obj
 	@echo ... app/classes/Calculation.i
 	@echo ... app/classes/Calculation.s
+	@echo ... app/classes/Logic.obj
+	@echo ... app/classes/Logic.i
+	@echo ... app/classes/Logic.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

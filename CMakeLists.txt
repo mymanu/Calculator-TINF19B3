@@ -3,4 +3,4 @@ project(Calculator-TINF19B3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Calculator-TINF19B3 main.cpp app/classes/Calculation.cpp app/classes/Calculation.h)
+add_executable(Calculator-TINF19B3 main.cpp app/classes/Calculation.cpp app/classes/Calculation.h app/classes/Logic.cpp app/classes/Logic.h)
