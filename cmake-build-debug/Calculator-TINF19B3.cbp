@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/manue/CLionProjects/Calculator-TINF19B3/app/classes/Calculation.h">
 			<Option target="Calculator-TINF19B3"/>
 		</Unit>
+		<Unit filename="C:/Users/manue/CLionProjects/Calculator-TINF19B3/app/classes/Logic.cpp">
+			<Option target="Calculator-TINF19B3"/>
+		</Unit>
+		<Unit filename="C:/Users/manue/CLionProjects/Calculator-TINF19B3/app/classes/Logic.h">
+			<Option target="Calculator-TINF19B3"/>
+		</Unit>
 		<Unit filename="C:/Users/manue/CLionProjects/Calculator-TINF19B3/main.cpp">
 			<Option target="Calculator-TINF19B3"/>
 		</Unit>
