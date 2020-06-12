@@ -70,7 +70,8 @@ void Term::divideInput(char* term) {
 }
 
 Term & Term::checkNumber(Term term) {
-    //getting in by first "number" digit to
+    //getting in by first "number" digit to save the Numbers into the number variables in Term Class
+    // while (number) add to firstNumber if not "" else add to secondNumber
     return term;
 }
 /*
