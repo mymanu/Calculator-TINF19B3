@@ -36,22 +36,27 @@ double Calculation::pow(){
 void Calculation::checkAndCalculate(std::string operand) {
     if (operand == "/" || operand == ":"){
         if (_y == 0){
+            _result = NAN;
             throw std::invalid_argument("Division by Zero is not defined.");
+        } else{
+            _result = Calculation::division();
         }
-        _result = Calculation::division();
     }
     if (operand == "^"){
         if (_y < 0){
             //operand = "/";
             //_result = Calculation::division();
+        } else{
+            _result = Calculation::pow();
         }
-        _result = Calculation::pow();
     }
     if (operand == "R"){
         if (_x < 0) {
+            _result = NAN;
             throw std::invalid_argument("Sqrt < 0 is not defined.");
+        } else{
+            _result = Calculation::sqrt();
         }
-        _result = Calculation::sqrt();
     }
     if(operand == "+"){
         _result = Calculation::addition();

@@ -13,17 +13,16 @@ public:
     Calculation(std::string operand, double pX);
     ~Calculation();
 
+    double getResult();
+private:
     double sqrt();
     double addition();
     double subtraction();
     double multiply();
     double division();
     double pow();
-
     void checkAndCalculate(std::string operand);
-    double getResult();
 
-private:
     double _result;
     double _x;
     double _y;
