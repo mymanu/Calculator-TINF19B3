@@ -6,11 +6,11 @@
 #include <cmath>
 
 Calculation::Calculation(std::string operand, double pX, double pY) : _x(pX), _y(pY){
-   Calculation::check(operand);
+   Calculation::checkAndCalculate(operand);
 }
 
 Calculation::Calculation(std::string operand, double pX) : _x(pX){
-    Calculation::check(operand);
+    Calculation::checkAndCalculate(operand);
 }
 
 Calculation::~Calculation() {}
@@ -42,7 +42,8 @@ void Calculation::checkAndCalculate(std::string operand) {
     }
     if (operand == "^"){
         if (_y < 0){
-            operand = "/";
+            //operand = "/";
+            //_result = Calculation::division();
         }
         _result = Calculation::pow();
     }
@@ -51,6 +52,15 @@ void Calculation::checkAndCalculate(std::string operand) {
             throw std::invalid_argument("Sqrt < 0 is not defined.");
         }
         _result = Calculation::sqrt();
+    }
+    if(operand == "+"){
+        _result = Calculation::addition();
+    }
+    if(operand == "-"){
+        _result = Calculation::subtraction();
+    }
+    if(operand == "*"){
+        _result = Calculation::multiply();
     }
 }
 
