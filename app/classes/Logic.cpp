@@ -8,7 +8,18 @@
 using namespace std;
 
 Logic::Logic(char* term) {
-    string rule;
+    string rule = "No rule detected !!";
+
+    int size = 10;
+    int numberToParse[size] {-1,-1,-1,-1,-1};
+
+    int arrayLength = 0;
+    for (int x = 0; x < size; x++) {
+        if(numberToParse[x] != -1) {
+        arrayLength++;
+        }
+    }
+    cout << "Length: " << arrayLength << endl;
 
     if(strstr(term, "(")) {
         rule = "brace";
@@ -32,6 +43,8 @@ Logic::Logic(char* term) {
 }
 
 class Term {
+    char* input;
+    int position = 0;
     string rule;
     int braceCounter = 0;
     double firstNumber;
@@ -43,8 +56,10 @@ public:
 };
 
 void Term::divideInput(char* term) {
-    for (int i = 0;i < sizeof(term); i++) {
-        char digit = term[i];
+    Term calc;
+    calc.input = term;
+    for (calc.position = 0; calc.position < sizeof(calc.input); calc.position++) {
+        char digit = calc.input[calc.position];
         if (digit == '(') {
             braceCounter++;
         } else if (digit == ')') {
@@ -64,15 +79,31 @@ void Term::divideInput(char* term) {
         } else if (digit == '-') {
             rule = "subtraction";
         } else if (digit >= '0' && digit <= '9') {
-            checkNumber(Term());
+            checkNumber(calc);
         }
     }
 }
 
-Term & Term::checkNumber(Term term) {
+Term & Term::checkNumber(Term calc) {
     //getting in by first "number" digit to save the Numbers into the number variables in Term Class
     // while (number) add to firstNumber if not "" else add to secondNumber
-    return term;
+    int numberToParse[50];
+    int positionInNumber = 0;
+
+    int commaPosition = 0;
+
+    for (int i = calc.position; i < sizeof(calc.input); i++) {
+        char digit = calc.input[i];
+
+        if (digit >= '0' && digit <= '9') {
+            numberToParse[positionInNumber] = digit;
+            positionInNumber++;
+        } else if (digit == ',') {
+            commaPosition = positionInNumber;
+        }
+        calc.position = i;
+    }
+    return calc;
 }
 /*
  * ()
