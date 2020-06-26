@@ -15,7 +15,7 @@ public:
 protected:
 
 private:
-
+    std::string history[10];
 };
 
 
