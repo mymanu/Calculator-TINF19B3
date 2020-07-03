@@ -27,11 +27,15 @@ public:
     double checkNumber(Term*);
 
 private:
-    string input;
-    char operand;
-    string::size_type restSize;
+    char firstOperand;
+    char secondOperand;
+    char thirdOperand;
+    char* rest;
     double firstNumber;
     double secondNumber;
+    double thirdNumber;
+    double fourthNumber;
+    double result;
 
 
     int position = 0;

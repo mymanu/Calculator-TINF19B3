@@ -32,20 +32,46 @@ Logic::Logic(char term[]) {
 }
 
 //void Term::divideInput(char* input) {
-Term::Term(char term[]) {
+Term::Term(char input[]) {
+
+    //TODO Erstes Zeichen überprüfen, ob Klammer, Vorzeichen (-), Operator (für rechnen mit letztem Ergebnis oder Zahl
 
     //to split input in numbers.
     //--------------------------------
-    input = term;
-    //if input[0] != Zahl dann operator oder fehler.
-    //firstNumber = stoi(input,&restSize);
-    char* restAll;
-    firstNumber = strtod(term, &restAll);
-    //string rest = input.substr(restSize);
+    //if input[0] != number or - -> operator or ( or wrong input.
+    // negative number works
+    firstNumber = strtod(input, &rest);
 
     cout << "Value: " << firstNumber << endl;
-    cout << "Value * 11: " << firstNumber*11 << endl;
-    //cout << "Rest: " << rest << endl;
+    cout << "Value * 11: " << firstNumber * 11 << endl;
+    cout << "Rest: " << rest << endl;
+
+    firstOperand = rest[0];
+    rest++;
+    cout << "Rest nach Abschnitt: " << rest << endl;
+
+    secondNumber = strtod(rest, &rest);
+    secondOperand = rest[0];
+    rest++;
+
+    cout << "Value: " << secondNumber << endl;
+    cout << "Value * 11: " << secondNumber * 11 << endl;
+    cout << "Rest: " << rest << endl;
+
+    thirdNumber = strtod(rest, &rest);
+    thirdOperand = rest[0];
+    rest++;
+
+    cout << "Value: " << thirdNumber << endl;
+    cout << "Value * 11: " << thirdNumber * 11 << endl;
+    cout << "Rest: " << rest << endl;
+
+    fourthNumber = strtod(rest, &rest);
+
+    cout << "Value: " << fourthNumber << endl;
+    cout << "Value * 11: " << fourthNumber * 11 << endl;
+    cout << "Rest: " << rest << endl;
+}
 
 
   /*  if (rest.compare(0,1,".")!= 0) {
@@ -75,7 +101,7 @@ Term::Term(char term[]) {
 
 
 
-    for (position = 0; position < input.size(); position++) {
+ /*   for (position = 0; position < sizeof(input); position++) {
         char digit = input[position];
         if (digit == '(') {
             braceCounter++;
@@ -100,9 +126,9 @@ Term::Term(char term[]) {
             cout << "First Number: " << firstNumber << endl;
         }
     }
-}
+}*/
 
-double Term::checkNumber(Term*) {
+/*double Term::checkNumber(Term*) {
     //getting in by first "number" digit to save the Numbers into the number variables in Term Class
     // while (number) add to firstNumber if not "" else add to secondNumber
     int size = 50;
@@ -116,8 +142,7 @@ double Term::checkNumber(Term*) {
 
     int commaPosition = 0;
 
-    /* calc.position position in input string.
-     */
+
 
     for (int i = position; i < input.size(); i++) {
         char digit = input[i];
@@ -145,7 +170,7 @@ double Term::checkNumber(Term*) {
     }
 
     return this->firstNumber;
-}
+}*/
 /*
  * ()
  * Potenz "^"
