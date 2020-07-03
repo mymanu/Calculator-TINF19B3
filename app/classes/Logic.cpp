@@ -9,11 +9,6 @@ using namespace std;
 
 Logic::Logic(char term[]) {
     string rule = "No rule detected !!";
-   // string termination = term;
-    string::size_type rest;
-    double x = stoi(term,&rest);
-    cout << "Value: " << x << endl;
-   // cout << "Rest: " << termination.substr(rest) << endl;
 
     if(strstr(term, "(")) {
         rule = "brace";
@@ -38,7 +33,49 @@ Logic::Logic(char term[]) {
 
 //void Term::divideInput(char* input) {
 Term::Term(char term[]) {
-    for (position = 0; position < sizeof(input); position++) {
+
+    //to split input in numbers.
+    //--------------------------------
+    input = term;
+    //if input[0] != Zahl dann operator oder fehler.
+    //firstNumber = stoi(input,&restSize);
+    char* restAll;
+    firstNumber = strtod(term, &restAll);
+    //string rest = input.substr(restSize);
+
+    cout << "Value: " << firstNumber << endl;
+    cout << "Value * 11: " << firstNumber*11 << endl;
+    //cout << "Rest: " << rest << endl;
+
+
+  /*  if (rest.compare(0,1,".")!= 0) {
+        operand = rest[0];
+        cout << "Rest vor kuerzen: " << rest << endl;
+        rest = rest.substr(1);
+        cout << "Rest nach kuerzen: " << rest << endl;
+    } else {
+        rest = rest.substr(1);
+        int restOfNumber = stoi(rest,&restSize);
+        firstNumber = firstNumber + .500;
+        cout << "Value: " << firstNumber << endl;
+    }*/
+
+   // secondNumber = stoi(newRest,&restSize);
+
+   // cout << "Value: " << secondNumber << endl;
+   // cout << "Rest: " << newRest.substr(rest) << endl;
+
+
+    //---------------------------------
+    //receive the first number (everything before the point) and the rest as a String.
+
+     /*while(!input.substr(rest).empty()) {
+        break;
+    }*/
+
+
+
+    for (position = 0; position < input.size(); position++) {
         char digit = input[position];
         if (digit == '(') {
             braceCounter++;
@@ -82,7 +119,7 @@ double Term::checkNumber(Term*) {
     /* calc.position position in input string.
      */
 
-    for (int i = position; i < sizeof(input); i++) {
+    for (int i = position; i < input.size(); i++) {
         char digit = input[i];
 
         if (digit >= '0' && digit <= '9') {

@@ -27,12 +27,18 @@ public:
     double checkNumber(Term*);
 
 private:
-    char* input;
+    string input;
+    char operand;
+    string::size_type restSize;
+    double firstNumber;
+    double secondNumber;
+
+
     int position = 0;
     string rule;
     int braceCounter = 0;
-    double firstNumber;
-    double secondNumber;
+
+
 };
 
 
