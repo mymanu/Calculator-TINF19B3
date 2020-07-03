@@ -57,6 +57,7 @@ include CMakeFiles/Calculator-TINF19B3.dir/progress.make
 include CMakeFiles/Calculator-TINF19B3.dir/flags.make
 
 CMakeFiles/Calculator-TINF19B3.dir/main.cpp.obj: CMakeFiles/Calculator-TINF19B3.dir/flags.make
+CMakeFiles/Calculator-TINF19B3.dir/main.cpp.obj: CMakeFiles/Calculator-TINF19B3.dir/includes_CXX.rsp
 CMakeFiles/Calculator-TINF19B3.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\CLionProjects\Calculator-TINF19B3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/main.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Calculator-TINF19B3.dir\main.cpp.obj -c C:\Users\manue\CLionProjects\Calculator-TINF19B3\main.cpp
@@ -70,6 +71,7 @@ CMakeFiles/Calculator-TINF19B3.dir/main.cpp.s: cmake_force
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\manue\CLionProjects\Calculator-TINF19B3\main.cpp -o CMakeFiles\Calculator-TINF19B3.dir\main.cpp.s
 
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj: CMakeFiles/Calculator-TINF19B3.dir/flags.make
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj: CMakeFiles/Calculator-TINF19B3.dir/includes_CXX.rsp
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj: ../app/classes/Calculation.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\CLionProjects\Calculator-TINF19B3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Calculator-TINF19B3.dir\app\classes\Calculation.cpp.obj -c C:\Users\manue\CLionProjects\Calculator-TINF19B3\app\classes\Calculation.cpp
@@ -83,6 +85,7 @@ CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.s: cmake_force
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\manue\CLionProjects\Calculator-TINF19B3\app\classes\Calculation.cpp -o CMakeFiles\Calculator-TINF19B3.dir\app\classes\Calculation.cpp.s
 
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj: CMakeFiles/Calculator-TINF19B3.dir/flags.make
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj: CMakeFiles/Calculator-TINF19B3.dir/includes_CXX.rsp
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj: ../app/classes/Logic.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\manue\CLionProjects\Calculator-TINF19B3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Calculator-TINF19B3.dir\app\classes\Logic.cpp.obj -c C:\Users\manue\CLionProjects\Calculator-TINF19B3\app\classes\Logic.cpp
@@ -108,6 +111,9 @@ Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/main.cpp.obj
 Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj
 Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj
 Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/build.make
+Calculator-TINF19B3.exe: C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/libQt5Widgetsd.a
+Calculator-TINF19B3.exe: C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/libQt5Guid.a
+Calculator-TINF19B3.exe: C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/libQt5Cored.a
 Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/linklibs.rsp
 Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/objects1.rsp
 Calculator-TINF19B3.exe: CMakeFiles/Calculator-TINF19B3.dir/link.txt

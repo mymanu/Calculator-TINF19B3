@@ -19,4 +19,21 @@ private:
 };
 
 
+class Term {
+
+public:
+    Term(char input[]);
+    //void divideInput(char* input);
+    double checkNumber(Term*);
+
+private:
+    char* input;
+    int position = 0;
+    string rule;
+    int braceCounter = 0;
+    double firstNumber;
+    double secondNumber;
+};
+
+
 #endif //CALCULATOR_TINF19B3_LOGIC_H

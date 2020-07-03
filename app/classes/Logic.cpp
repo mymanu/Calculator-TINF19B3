@@ -7,19 +7,13 @@
 #include <iostream>
 using namespace std;
 
-Logic::Logic(char* term) {
+Logic::Logic(char term[]) {
     string rule = "No rule detected !!";
-
-    int size = 10;
-    int numberToParse[size] {-1,-1,-1,-1,-1};
-
-    int arrayLength = 0;
-    for (int x = 0; x < size; x++) {
-        if(numberToParse[x] != -1) {
-        arrayLength++;
-        }
-    }
-    cout << "Length: " << arrayLength << endl;
+   // string termination = term;
+    string::size_type rest;
+    double x = stoi(term,&rest);
+    cout << "Value: " << x << endl;
+   // cout << "Rest: " << termination.substr(rest) << endl;
 
     if(strstr(term, "(")) {
         rule = "brace";
@@ -42,24 +36,10 @@ Logic::Logic(char* term) {
     cout << "Recognized rule is: " << rule << endl;
 }
 
-class Term {
-    char* input;
-    int position = 0;
-    string rule;
-    int braceCounter = 0;
-    double firstNumber;
-    double secondNumber;
-
-public:
-    void divideInput(char* term);
-    Term& checkNumber(Term);
-};
-
-void Term::divideInput(char* term) {
-    Term calc;
-    calc.input = term;
-    for (calc.position = 0; calc.position < sizeof(calc.input); calc.position++) {
-        char digit = calc.input[calc.position];
+//void Term::divideInput(char* input) {
+Term::Term(char term[]) {
+    for (position = 0; position < sizeof(input); position++) {
+        char digit = input[position];
         if (digit == '(') {
             braceCounter++;
         } else if (digit == ')') {
@@ -79,31 +59,55 @@ void Term::divideInput(char* term) {
         } else if (digit == '-') {
             rule = "subtraction";
         } else if (digit >= '0' && digit <= '9') {
-            checkNumber(calc);
+            this->firstNumber = checkNumber(this);
+            cout << "First Number: " << firstNumber << endl;
         }
     }
 }
 
-Term & Term::checkNumber(Term calc) {
+double Term::checkNumber(Term*) {
     //getting in by first "number" digit to save the Numbers into the number variables in Term Class
     // while (number) add to firstNumber if not "" else add to secondNumber
-    int numberToParse[50];
+    int size = 50;
+    int numberToParse[size];
+    for (int x = 0; x < size; x++) {
+        numberToParse[x] = -1;
+        }
+
     int positionInNumber = 0;
+    int potenz = -1;
 
     int commaPosition = 0;
 
-    for (int i = calc.position; i < sizeof(calc.input); i++) {
-        char digit = calc.input[i];
+    /* calc.position position in input string.
+     */
+
+    for (int i = position; i < sizeof(input); i++) {
+        char digit = input[i];
 
         if (digit >= '0' && digit <= '9') {
             numberToParse[positionInNumber] = digit;
             positionInNumber++;
         } else if (digit == ',') {
             commaPosition = positionInNumber;
+        } else {
+            break;
         }
-        calc.position = i;
+        position = i;
     }
-    return calc;
+    for (int i = 0; i < size; i++) {
+        if (numberToParse[i] != -1) {
+            potenz++;
+        }
+    }
+    for (int i = 0; i < size; i++) {
+        if (numberToParse[i] != -1) {
+           firstNumber = numberToParse[i] ^ potenz;
+           potenz--;
+        }
+    }
+
+    return this->firstNumber;
 }
 /*
  * ()

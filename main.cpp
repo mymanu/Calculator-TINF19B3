@@ -28,6 +28,8 @@ int main () {
 
         cout << "Your input was: " << input << " Thank you for calculating with the MaMa Calculator" << endl;
 
+        Term term(input);
+
         cout << "To turn off the MaMa Calculator, please enter \"off\" otherwise press ENTER" << endl;
         cin.getline(input, 200);
 

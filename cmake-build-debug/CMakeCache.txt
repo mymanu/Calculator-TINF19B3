@@ -253,6 +253,15 @@ Calculator-TINF19B3_BINARY_DIR:STATIC=C:/Users/manue/CLionProjects/Calculator-TI
 //Value Computed by CMake
 Calculator-TINF19B3_SOURCE_DIR:STATIC=C:/Users/manue/CLionProjects/Calculator-TINF19B3
 
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets
+
 
 ########################
 # INTERNAL cache entries
