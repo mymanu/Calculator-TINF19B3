@@ -10,7 +10,7 @@ using namespace std;
 class Logic {
 
 public:
-    Logic(char term[]);
+    Logic(char* term);
 
 protected:
 

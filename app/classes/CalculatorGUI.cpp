@@ -3,13 +3,16 @@
 //
 
 #include "CalculatorGUI.h"
+#include "Logic.h"
 #include <QtWidgets>
 #include <QDebug>
+#include <QMessageBox>
 #include <iostream>
 
 CalculatorGUI::CalculatorGUI(QWidget *parent) : QWidget(parent), ui(new Ui::Form)
 {
     ui->setupUi(this);
+    m_Logic = new Logic();
 
     connect(ui->button0, SIGNAL(released()), this, SLOT(stringButtonClicked()));
     connect(ui->button2, SIGNAL(released()), this, SLOT(stringButtonClicked()));
@@ -68,9 +71,17 @@ void CalculatorGUI::equalClicked() {
     char *c_InputStr = inputBa.data();
 
     try {
+        m_Logic.startNewCalculation(c_InputStr);
 
+        ui->textEdit->setText(QString::number(m_Logic.getResult()));
+
+        ui->listHistory->addItem(QString::fromStdString(m_Logic.getHistory()));
+        ui->listHistory->scrollToBottom();
     } catch (std::invalid_argument exception) {
-
+        ui->textEdit->setText("NOPE");
+        QMessageBox messageBox;
+        messageBox.critical(0,"invalid argument", exception.what());
+        messageBox.setFixedSize(400,200);
     }
 
     m_equated = true;

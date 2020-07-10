@@ -3,6 +3,7 @@
 //
 #include <QtWidgets>
 #include "../ui/calculator.h"
+#include "Logic.h"
 
 #ifndef CALCULATOR_TINF19B3_CALCULATORGUI_H
 #define CALCULATOR_TINF19B3_CALCULATORGUI_H
@@ -20,6 +21,7 @@ protected:
 
 private:
     Ui::Form *ui;
+    Logic m_Logic;
     bool m_equated = false;
 
 private slots:
