@@ -5,10 +5,20 @@
 #include <string>
 #include <iostream>
 #include "app/classes/Logic.h"
+#include "app/classes/CalculatorGUI.h"
+#include <QApplication>
 
 using namespace std;
 
-int main () {
+int main (int argc, char *argv[]) {
+    QApplication app(argc, argv);
+
+    CalculatorGUI myCalcGUI;
+    myCalcGUI.show();
+
+    return app.exec();
+
+
     bool calculation = true;
     while(calculation) {
         double result;

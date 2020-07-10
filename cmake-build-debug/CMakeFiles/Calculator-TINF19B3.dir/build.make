@@ -57,9 +57,22 @@ include CMakeFiles/Calculator-TINF19B3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Calculator-TINF19B3.dir/flags.make
 
+CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o: CMakeFiles/Calculator-TINF19B3.dir/flags.make
+CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o: Calculator-TINF19B3_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o -c /home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/Calculator-TINF19B3_autogen/mocs_compilation.cpp
+
+CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/Calculator-TINF19B3_autogen/mocs_compilation.cpp > CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/Calculator-TINF19B3_autogen/mocs_compilation.cpp -o CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o: CMakeFiles/Calculator-TINF19B3.dir/flags.make
 CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o -c /home/suppe/dh/Calculator-TINF19B3/main.cpp
 
 CMakeFiles/Calculator-TINF19B3.dir/main.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/Calculator-TINF19B3.dir/main.cpp.s: cmake_force
 
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o: CMakeFiles/Calculator-TINF19B3.dir/flags.make
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o: ../app/classes/Calculation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o -c /home/suppe/dh/Calculator-TINF19B3/app/classes/Calculation.cpp
 
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.s: cmake_force
 
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o: CMakeFiles/Calculator-TINF19B3.dir/flags.make
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o: ../app/classes/Logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o -c /home/suppe/dh/Calculator-TINF19B3/app/classes/Logic.cpp
 
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.i: cmake_force
@@ -96,21 +109,41 @@ CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suppe/dh/Calculator-TINF19B3/app/classes/Logic.cpp -o CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.s
 
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o: CMakeFiles/Calculator-TINF19B3.dir/flags.make
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o: ../app/classes/CalculatorGUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o -c /home/suppe/dh/Calculator-TINF19B3/app/classes/CalculatorGUI.cpp
+
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/suppe/dh/Calculator-TINF19B3/app/classes/CalculatorGUI.cpp > CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.i
+
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suppe/dh/Calculator-TINF19B3/app/classes/CalculatorGUI.cpp -o CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.s
+
 # Object files for target Calculator-TINF19B3
 Calculator__TINF19B3_OBJECTS = \
+"CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o" \
 "CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o" \
-"CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o"
+"CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o" \
+"CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o"
 
 # External object files for target Calculator-TINF19B3
 Calculator__TINF19B3_EXTERNAL_OBJECTS =
 
+Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o
 Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/main.cpp.o
 Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.o
 Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.o
+Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o
 Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/build.make
+Calculator-TINF19B3: /usr/lib/libQt5Widgets.so.5.15.0
+Calculator-TINF19B3: /usr/lib/libQt5Gui.so.5.15.0
+Calculator-TINF19B3: /usr/lib/libQt5Core.so.5.15.0
 Calculator-TINF19B3: CMakeFiles/Calculator-TINF19B3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Calculator-TINF19B3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/suppe/dh/Calculator-TINF19B3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Calculator-TINF19B3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Calculator-TINF19B3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

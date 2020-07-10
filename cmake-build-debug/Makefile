@@ -123,6 +123,46 @@ Calculator-TINF19B3/fast:
 	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/build
 .PHONY : Calculator-TINF19B3/fast
 
+#=============================================================================
+# Target rules for targets named Calculator-TINF19B3_autogen
+
+# Build rule for target.
+Calculator-TINF19B3_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Calculator-TINF19B3_autogen
+.PHONY : Calculator-TINF19B3_autogen
+
+# fast build rule for target.
+Calculator-TINF19B3_autogen/fast:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3_autogen.dir/build.make CMakeFiles/Calculator-TINF19B3_autogen.dir/build
+.PHONY : Calculator-TINF19B3_autogen/fast
+
+Calculator-TINF19B3_autogen/mocs_compilation.o: Calculator-TINF19B3_autogen/mocs_compilation.cpp.o
+
+.PHONY : Calculator-TINF19B3_autogen/mocs_compilation.o
+
+# target to build an object file
+Calculator-TINF19B3_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.o
+.PHONY : Calculator-TINF19B3_autogen/mocs_compilation.cpp.o
+
+Calculator-TINF19B3_autogen/mocs_compilation.i: Calculator-TINF19B3_autogen/mocs_compilation.cpp.i
+
+.PHONY : Calculator-TINF19B3_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Calculator-TINF19B3_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.i
+.PHONY : Calculator-TINF19B3_autogen/mocs_compilation.cpp.i
+
+Calculator-TINF19B3_autogen/mocs_compilation.s: Calculator-TINF19B3_autogen/mocs_compilation.cpp.s
+
+.PHONY : Calculator-TINF19B3_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Calculator-TINF19B3_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/Calculator-TINF19B3_autogen/mocs_compilation.cpp.s
+.PHONY : Calculator-TINF19B3_autogen/mocs_compilation.cpp.s
+
 app/classes/Calculation.o: app/classes/Calculation.cpp.o
 
 .PHONY : app/classes/Calculation.o
@@ -149,6 +189,33 @@ app/classes/Calculation.s: app/classes/Calculation.cpp.s
 app/classes/Calculation.cpp.s:
 	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.s
 .PHONY : app/classes/Calculation.cpp.s
+
+app/classes/CalculatorGUI.o: app/classes/CalculatorGUI.cpp.o
+
+.PHONY : app/classes/CalculatorGUI.o
+
+# target to build an object file
+app/classes/CalculatorGUI.cpp.o:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.o
+.PHONY : app/classes/CalculatorGUI.cpp.o
+
+app/classes/CalculatorGUI.i: app/classes/CalculatorGUI.cpp.i
+
+.PHONY : app/classes/CalculatorGUI.i
+
+# target to preprocess a source file
+app/classes/CalculatorGUI.cpp.i:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.i
+.PHONY : app/classes/CalculatorGUI.cpp.i
+
+app/classes/CalculatorGUI.s: app/classes/CalculatorGUI.cpp.s
+
+.PHONY : app/classes/CalculatorGUI.s
+
+# target to generate assembly for a file
+app/classes/CalculatorGUI.cpp.s:
+	$(MAKE) -f CMakeFiles/Calculator-TINF19B3.dir/build.make CMakeFiles/Calculator-TINF19B3.dir/app/classes/CalculatorGUI.cpp.s
+.PHONY : app/classes/CalculatorGUI.cpp.s
 
 app/classes/Logic.o: app/classes/Logic.cpp.o
 
@@ -213,9 +280,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Calculator-TINF19B3"
+	@echo "... Calculator-TINF19B3_autogen"
+	@echo "... Calculator-TINF19B3_autogen/mocs_compilation.o"
+	@echo "... Calculator-TINF19B3_autogen/mocs_compilation.i"
+	@echo "... Calculator-TINF19B3_autogen/mocs_compilation.s"
 	@echo "... app/classes/Calculation.o"
 	@echo "... app/classes/Calculation.i"
 	@echo "... app/classes/Calculation.s"
+	@echo "... app/classes/CalculatorGUI.o"
+	@echo "... app/classes/CalculatorGUI.i"
+	@echo "... app/classes/CalculatorGUI.s"
 	@echo "... app/classes/Logic.o"
 	@echo "... app/classes/Logic.i"
 	@echo "... app/classes/Logic.s"
