@@ -2,85 +2,104 @@
 // Created by manuel on 05.06.2020.
 //
 
+//TODO Logic Konstruktor leer
+// Neue Berechnungen übegeben in public funktion
+
 #include "Logic.h"
 #include "Calculation.h"
 #include <string.h>
 #include <iostream>
+#include <sstream>
 using namespace std;
 
-Logic::Logic(char term[]) {
-    string rule = "No rule detected !!";
-
-    if(strstr(term, "(")) {
-        rule = "brace";
-    } else if(strstr(term, "^")) {
-        rule = "square";
-    } else if(strstr(term, "R")) {
-        rule = "root";
-    } else if(strstr(term, "*")) {
-        rule = "multiply";
-    } else if(strstr(term, "/")) {
-        rule = "division";
-    } else if(strstr(term, ":")) {
-        rule = "division";
-    } else if(strstr(term, "+")) {
-        rule = "addition";
-    } else if(strstr(term, "-")) {
-        rule = "subtraction";
-    }
-
-    cout << "Recognized rule is: " << rule << endl;
+Logic::Logic() {
 }
 
-Term::Term(char rest[]) {
+void Logic::calculate(char rest[]) {
+    int i = -1;
+    result = 0;
+    string input = rest;
+    string restAsString = rest;
 
     //TODO Erstes Zeichen überprüfen, ob Klammer, Vorzeichen (-), Operator (für rechnen mit letztem Ergebnis oder Zahl
 
-    while (!strstr(rest, " ")) {
-        char digit = rest[0];
+    //TODO in Methode auslagern ?????
 
-        if (digit >= '0' && digit <= '9' || digit == '-') {
-            //if input[0] != number or - -> operator or ( or wrong input.
-            if(i >= 0) {
-                numbers[i] = strtod(rest, &rest);
+     while (!restAsString.empty()) {
+         char digit = rest[0];
 
-                cout << "Number: " << i << " Value: " << numbers[i] << endl;
-                cout << "Rest: " << rest << endl;
-            } else {
-                result = strtod(rest, &rest);
-                cout << "Number: " << i << " Value: " << result << endl;
-            }
+         if (digit >= '0' && digit <= '9' || digit == '-') {
+             //if input[0] != number or - -> operator or ( or wrong input.
+             if(i >= 0) {
+                 numbers[i] = strtod(rest, &rest);
 
-            operand[i+1] = rest[0];
+                 cout << "Number: " << i << " Value: " << numbers[i] << endl;
+                 cout << "Rest: " << rest << endl;
+             } else {
+                 result = strtod(rest, &rest);
+                 cout << "Number: " << i << " Value: " << result << endl;
+             }
 
-           if(i >= 0) {
-               Calculation calc(operand[i], result, numbers[i]);
-               try {
-                   result = calc.getResult();
-               } catch(...) {
-                /*TODO Exception weiterreichen oder abfangen und dann Rechnung stoppen oder so.
-                 * Siehe Vorlesung 4
-                 * Invalid Argmunent Exception.
-                 */
-               }
-               cout << "Result " << result << endl;
-           }
-            rest++;
-            cout << "Rest nach Abschnitt: " << rest << endl;
+             restAsString = rest;
+             if(!restAsString.empty()) {
+                 operand[i + 1] = rest[0];
+                 rest++;
+             }
 
-            i++;
-            cout << "-------------------------------------------------------------------------------" << endl;
+             //TODO Regeln beachten, wann was berechnet wird (Punkt vor Strich)
+             if(i >= 0) {
+                 Calculation calc(operand[i], result, numbers[i]);
+                 try {
+                     result = calc.getResult();
+                 } catch(...) {
+                     /*TODO Exception weiterreichen oder abfangen und dann Rechnung stoppen oder so.
+                      * Siehe Vorlesung 4
+                      * Invalid Argmunent Exception.
+                      */
+                 }
+                 cout << "Result " << result << endl;
+             }
 
-        } else if (digit == '^' || digit == '*' || digit == '/' || digit == ':' || digit == '+') {
-            //TODO History mit Operator mit folgender Zahl berechnen
+             cout << "Rest nach Abschnitt: " << rest << endl;
 
-        } else if (digit == '-') {
-            //TODO History mit Operator mit folgender Zahl berechnen
+             i++;
+             cout << "-------------------------------------------------------------------------------" << endl;
 
-        } else {
-            //TODO Error keine valide Eingabe
-        }
-    }
+         } else if (digit == '^' || digit == '*' || digit == '/' || digit == ':' || digit == '+') {
+             //TODO History mit Operator mit folgender Zahl berechnen
+             // falls history leer dann fehler
+
+         } else if (digit == '-') {
+             //TODO Falls History leer dann minuszahl
+             // sonst mit Operator mit folgender Zahl berechnen
+
+         } else {
+             //TODO Error keine valide Eingabe
+         }
+     }
+     // History: "<Input> = <Ergebnis>"
+    // Convert result from double to string
+     std::ostringstream resultStream;
+     resultStream << result;
+     std::string resultAsString = resultStream.str();
+
+     string historyEntry = input;
+     historyEntry.append(" = ");
+     historyEntry.append(resultAsString);
+     history[historyPosition] = historyEntry;
+     //  cout << "History Entry: " << historyEntry << endl;
+
+     historyPosition++;
+
+     if (historyPosition == 10){
+         historyPosition = 0;
+     }
+
+     restAsString = rest;
+}
+
+string* Logic::getHistory() {
+    return history;
 }
 
 

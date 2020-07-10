@@ -10,29 +10,18 @@ using namespace std;
 class Logic {
 
 public:
-    Logic(char term[]);
-
-protected:
-
-private:
-    std::string history[10];
-};
-
-
-class Term {
-
-public:
-    Term(char* rest);
+    Logic();
     //void divideInput(char* input);
-    double checkNumber(Term*);
+    void calculate(char* rest);
+    string* getHistory();
 
 private:
     string operand[10];
     double numbers[20];
-    int i = -1;
-    double result;
+    double result = 0;
+    string history[10];
+    int historyPosition = 0;
 
-    string rule;
     int braceCounter = 0;
 
 

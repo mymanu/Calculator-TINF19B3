@@ -9,6 +9,7 @@
 using namespace std;
 
 int main () {
+    Logic logic;
     bool calculation = true;
     while(calculation) {
         double result;
@@ -25,11 +26,16 @@ int main () {
 
         cin.getline(input, 200);
 
-        Logic logic(input);
-
         cout << "Your input was: " << input << " Thank you for calculating with the MaMa Calculator" << endl;
 
-        Term term(input);
+        logic.calculate(input);
+
+        for(int i = 0; i < 10; i++){
+            if (!logic.getHistory()[i].empty()) {
+                cout << "History " << i << " Wert: " << logic.getHistory()[i] << endl;
+            }
+        }
+
 
         cout << "To turn off the MaMa Calculator, please enter \"off\" otherwise press ENTER" << endl;
         cin.getline(input, 200);
