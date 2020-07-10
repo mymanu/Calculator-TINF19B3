@@ -22,23 +22,16 @@ private:
 class Term {
 
 public:
-    Term(char input[]);
+    Term(char* rest);
     //void divideInput(char* input);
     double checkNumber(Term*);
 
 private:
-    char firstOperand;
-    char secondOperand;
-    char thirdOperand;
-    char* rest;
-    double firstNumber;
-    double secondNumber;
-    double thirdNumber;
-    double fourthNumber;
+    string operand[10];
+    double numbers[20];
+    int i = -1;
     double result;
 
-
-    int position = 0;
     string rule;
     int braceCounter = 0;
 

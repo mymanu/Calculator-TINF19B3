@@ -4,6 +4,7 @@
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj: ../app/classes/Calculation.cpp
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Calculation.cpp.obj: ../app/classes/Calculation.h
 
+CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj: ../app/classes/Calculation.h
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj: ../app/classes/Logic.cpp
 CMakeFiles/Calculator-TINF19B3.dir/app/classes/Logic.cpp.obj: ../app/classes/Logic.h
 

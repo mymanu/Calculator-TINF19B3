@@ -3,6 +3,7 @@
 //
 
 #include "Logic.h"
+#include "Calculation.h"
 #include <string.h>
 #include <iostream>
 using namespace std;
@@ -31,25 +32,59 @@ Logic::Logic(char term[]) {
     cout << "Recognized rule is: " << rule << endl;
 }
 
-//void Term::divideInput(char* input) {
-Term::Term(char input[]) {
+Term::Term(char rest[]) {
 
     //TODO Erstes Zeichen überprüfen, ob Klammer, Vorzeichen (-), Operator (für rechnen mit letztem Ergebnis oder Zahl
 
-    //to split input in numbers.
-    //--------------------------------
-    //if input[0] != number or - -> operator or ( or wrong input.
-    // negative number works
-    firstNumber = strtod(input, &rest);
+    while (!strstr(rest, " ")) {
+        char digit = rest[0];
 
-    cout << "Value: " << firstNumber << endl;
-    cout << "Value * 11: " << firstNumber * 11 << endl;
-    cout << "Rest: " << rest << endl;
+        if (digit >= '0' && digit <= '9' || digit == '-') {
+            //if input[0] != number or - -> operator or ( or wrong input.
+            if(i >= 0) {
+                numbers[i] = strtod(rest, &rest);
 
-    firstOperand = rest[0];
-    rest++;
-    cout << "Rest nach Abschnitt: " << rest << endl;
+                cout << "Number: " << i << " Value: " << numbers[i] << endl;
+                cout << "Rest: " << rest << endl;
+            } else {
+                result = strtod(rest, &rest);
+                cout << "Number: " << i << " Value: " << result << endl;
+            }
 
+            operand[i+1] = rest[0];
+
+           if(i >= 0) {
+               Calculation calc(operand[i], result, numbers[i]);
+               try {
+                   result = calc.getResult();
+               } catch(...) {
+                /*TODO Exception weiterreichen oder abfangen und dann Rechnung stoppen oder so.
+                 * Siehe Vorlesung 4
+                 * Invalid Argmunent Exception.
+                 */
+               }
+               cout << "Result " << result << endl;
+           }
+            rest++;
+            cout << "Rest nach Abschnitt: " << rest << endl;
+
+            i++;
+            cout << "-------------------------------------------------------------------------------" << endl;
+
+        } else if (digit == '^' || digit == '*' || digit == '/' || digit == ':' || digit == '+') {
+            //TODO History mit Operator mit folgender Zahl berechnen
+
+        } else if (digit == '-') {
+            //TODO History mit Operator mit folgender Zahl berechnen
+
+        } else {
+            //TODO Error keine valide Eingabe
+        }
+    }
+}
+
+
+/*
     secondNumber = strtod(rest, &rest);
     secondOperand = rest[0];
     rest++;
@@ -70,34 +105,8 @@ Term::Term(char input[]) {
 
     cout << "Value: " << fourthNumber << endl;
     cout << "Value * 11: " << fourthNumber * 11 << endl;
-    cout << "Rest: " << rest << endl;
-}
+    cout << "Rest: " << rest << endl;*/
 
-
-  /*  if (rest.compare(0,1,".")!= 0) {
-        operand = rest[0];
-        cout << "Rest vor kuerzen: " << rest << endl;
-        rest = rest.substr(1);
-        cout << "Rest nach kuerzen: " << rest << endl;
-    } else {
-        rest = rest.substr(1);
-        int restOfNumber = stoi(rest,&restSize);
-        firstNumber = firstNumber + .500;
-        cout << "Value: " << firstNumber << endl;
-    }*/
-
-   // secondNumber = stoi(newRest,&restSize);
-
-   // cout << "Value: " << secondNumber << endl;
-   // cout << "Rest: " << newRest.substr(rest) << endl;
-
-
-    //---------------------------------
-    //receive the first number (everything before the point) and the rest as a String.
-
-     /*while(!input.substr(rest).empty()) {
-        break;
-    }*/
 
 
 
@@ -180,3 +189,17 @@ Term::Term(char input[]) {
  * Plus "+"
  * Minus "-"
  */
+
+
+
+/*int test_size = sizeof(input) / sizeof(input[0]);
+cout << "Size OFF: " <<  test_size << endl;
+int size = sizeof(input);
+cout << "Size : " <<  size << endl;
+
+int y = 5;
+for(int x = 0; x < y; x++) {
+    cout << "X : " <<  x << endl;
+    cout << "Y : " <<  y << endl;
+    y = 3;
+}*/
