@@ -44,14 +44,11 @@ void Logic::calculate(char rest[]) {
 
              //TODO Regeln beachten, wann was berechnet wird (Punkt vor Strich)
              if(i >= 0) {
-                 Calculation calc(operand[i], result, numbers[i]);
                  try {
+                     Calculation calc(operand[i], result, numbers[i]);
                      result = calc.getResult();
-                 } catch(...) {
-                     /*TODO Exception weiterreichen oder abfangen und dann Rechnung stoppen oder so.
-                      * Siehe Vorlesung 4
-                      * Invalid Argmunent Exception.
-                      */
+                 } catch(std::invalid_argument exception) {
+                     throw exception;
                  }
                  cout << "Result " << result << endl;
              }
@@ -84,11 +81,8 @@ void Logic::calculate(char rest[]) {
                      try {
                          Calculation calc(operand[i], result, numbers[i]);
                          result = calc.getResult();
-                     } catch(...) {
-                         /*TODO Exception weiterreichen oder abfangen und dann Rechnung stoppen oder so.
-                          * Siehe Vorlesung 4
-                          * Invalid Argmunent Exception.
-                          */
+                     } catch(std::invalid_argument exception) {
+                         throw exception;
                      }
                      cout << "Result " << result << endl;
                  }
