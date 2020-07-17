@@ -1,5 +1,5 @@
 //
-// Created by suppe on 7/3/20.
+// Created by marius on 7/3/20.
 //
 
 #include "CalculatorGUI.h"
@@ -11,6 +11,7 @@
 
 CalculatorGUI::CalculatorGUI(QWidget *parent) : QWidget(parent), ui(new Ui::Form)
 {
+    // Setting up UI and connecting the slots
     ui->setupUi(this);
     m_Logic = new Logic();
 
@@ -43,7 +44,7 @@ CalculatorGUI::CalculatorGUI(QWidget *parent) : QWidget(parent), ui(new Ui::Form
 CalculatorGUI::~CalculatorGUI() {
     delete ui;
 }
-
+// When an button for textinput is clicked, get the char and append it to the string
 void CalculatorGUI::stringButtonClicked() {
     QPushButton * button = (QPushButton*)sender();
     QString textEditString = ui->textEdit->toPlainText();
@@ -66,10 +67,12 @@ void CalculatorGUI::stringButtonClicked() {
 }
 
 void CalculatorGUI::equalClicked() {
+    // convert the input-field to an an *c array
     QString inputStr = ui->textEdit->toPlainText();
     QByteArray inputBa = inputStr.toLocal8Bit();
     char *c_InputStr = inputBa.data();
 
+    // try to calculate the string, set the result as input and insert calculation into the history
     try {
         m_Logic.startNewCalculation(c_InputStr);
 
@@ -86,11 +89,11 @@ void CalculatorGUI::equalClicked() {
 
     m_equated = true;
 }
-
+// clear the input field
 void CalculatorGUI::clearClicked() {
     ui->textEdit->setText("");
 }
-
+// change the prefix of the whole input
 void CalculatorGUI::prefixChange() {
     QString textEditString = ui->textEdit->toPlainText();
 

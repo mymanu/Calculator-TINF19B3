@@ -11,6 +11,7 @@
 using namespace std;
 
 int main (int argc, char *argv[]) {
+    // initialise the GUI
     QApplication app(argc, argv);
 
     CalculatorGUI myCalcGUI;

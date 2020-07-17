@@ -1,5 +1,5 @@
 //
-// Created by suppe on 7/3/20.
+// Created by marius on 7/3/20.
 //
 #include <QtWidgets>
 #include "../ui/calculator.h"

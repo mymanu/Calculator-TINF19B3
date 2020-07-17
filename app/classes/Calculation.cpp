@@ -14,7 +14,7 @@ Calculation::Calculation(std::string operand, double pX) : _x(pX){
 }
 
 Calculation::~Calculation() {}
-
+//basic calculations
 double Calculation::sqrt(){
     return ::std::sqrt(_x);
 }
@@ -33,6 +33,7 @@ double Calculation::division(){
 double Calculation::pow(){
     return ::std::pow(_x, _y);
 }
+// check if there are invalid inputs -> if not: calculate
 void Calculation::checkAndCalculate(std::string operand) {
     if (operand == "/" || operand == ":"){
         if (_y == 0){
@@ -69,6 +70,7 @@ void Calculation::checkAndCalculate(std::string operand) {
     }
 }
 
+// returns the result value
 double Calculation::getResult() {
     return _result;
 }
