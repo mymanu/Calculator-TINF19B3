@@ -13,9 +13,9 @@ CalculatorGUI::CalculatorGUI(QWidget *parent) : QWidget(parent), ui(new Ui::Form
 {
     // Setting up UI and connecting the slots
     ui->setupUi(this);
-    m_Logic = new Logic();
 
     connect(ui->button0, SIGNAL(released()), this, SLOT(stringButtonClicked()));
+    connect(ui->button1, SIGNAL(released()), this, SLOT(stringButtonClicked()));
     connect(ui->button2, SIGNAL(released()), this, SLOT(stringButtonClicked()));
     connect(ui->button3, SIGNAL(released()), this, SLOT(stringButtonClicked()));
     connect(ui->button4, SIGNAL(released()), this, SLOT(stringButtonClicked()));
@@ -74,14 +74,14 @@ void CalculatorGUI::equalClicked() {
 
     // try to calculate the string, set the result as input and insert calculation into the history
     try {
-        m_Logic.startNewCalculation(c_InputStr);
+        m_Logic.calculate(c_InputStr);
 
         ui->textEdit->setText(QString::number(m_Logic.getResult()));
 
         ui->listHistory->addItem(QString::fromStdString(m_Logic.getHistory()));
         ui->listHistory->scrollToBottom();
     } catch (std::invalid_argument exception) {
-        ui->textEdit->setText("NOPE");
+        ui->textEdit->setText("ERROR");
         QMessageBox messageBox;
         messageBox.critical(0,"invalid argument", exception.what());
         messageBox.setFixedSize(400,200);

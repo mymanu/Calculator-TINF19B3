@@ -43,7 +43,7 @@ void Calculation::checkAndCalculate(std::string operand) {
             _result = Calculation::division();
         }
     }
-    if (operand == "^"){
+    else if (operand == "^"){
         if (_y < 0){
             //operand = "/";
             //_result = Calculation::division();
@@ -51,7 +51,7 @@ void Calculation::checkAndCalculate(std::string operand) {
             _result = Calculation::pow();
         }
     }
-    if (operand == "R"){
+    else if (operand == "R"){
         if (_x < 0) {
             _result = NAN;
             throw std::invalid_argument("Sqrt < 0 is not defined.");
@@ -59,14 +59,17 @@ void Calculation::checkAndCalculate(std::string operand) {
             _result = Calculation::sqrt();
         }
     }
-    if(operand == "+"){
+    else if(operand == "+"){
         _result = Calculation::addition();
     }
-    if(operand == "-"){
+    else if(operand == "-"){
         _result = Calculation::subtraction();
     }
-    if(operand == "*"){
+    else if(operand == "*"){
         _result = Calculation::multiply();
+    } else{
+        _result = NAN;
+        throw std::invalid_argument("Invalid Input.");
     }
 }
 

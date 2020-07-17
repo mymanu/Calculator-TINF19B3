@@ -35,7 +35,8 @@ int main (int argc, char *argv[]) {
 
         cin.getline(input, 200);
 
-        Logic logic(input);
+        Logic logic;
+        logic.calculate(input);
 
         cout << "Your input was: " << input << " Thank you for calculating with the MaMa Calculator" << endl;
 

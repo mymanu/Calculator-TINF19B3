@@ -10,12 +10,21 @@ using namespace std;
 class Logic {
 
 public:
-    Logic(char* term);
-
-protected:
+    Logic();
+    //void divideInput(char* input);
+    void calculate(char* rest);
+    double getResult();
+    string getHistory();
 
 private:
-    std::string history[10];
+    string operand[10];
+    double numbers[20];
+    double result = 0;
+    string history;
+
+    int braceCounter = 0;
+
+
 };
 
 
