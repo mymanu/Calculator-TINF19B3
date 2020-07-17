@@ -2,9 +2,6 @@
 // Created by manuel on 05.06.2020.
 //
 
-//TODO Logic Konstruktor leer
-// Neue Berechnungen übegeben in public funktion
-
 #include "Logic.h"
 #include "Calculation.h"
 #include <string.h>
@@ -17,7 +14,6 @@ Logic::Logic() {
 
 void Logic::calculate(char rest[]) {
     int i = -1;
-    result = 0;
     string input = rest;
     string restAsString = rest;
 
@@ -28,7 +24,7 @@ void Logic::calculate(char rest[]) {
      while (!restAsString.empty()) {
          char digit = rest[0];
 
-         if (digit >= '0' && digit <= '9' || digit == '-') {
+         if (digit >= '0' && digit <= '9') {
              //if input[0] != number or - -> operator or ( or wrong input.
              if(i >= 0) {
                  numbers[i] = strtod(rest, &rest);
@@ -65,16 +61,72 @@ void Logic::calculate(char rest[]) {
              i++;
              cout << "-------------------------------------------------------------------------------" << endl;
 
-         } else if (digit == '^' || digit == '*' || digit == '/' || digit == ':' || digit == '+') {
-             //TODO History mit Operator mit folgender Zahl berechnen
-             // falls history leer dann fehler
+         } else if (digit == '-' && (rest[1] >= '0' && digit <= '9')) {
+             if (getHistory().empty()) {
+                 if(i >= 0) {
+                     numbers[i] = strtod(rest, &rest);
 
-         } else if (digit == '-') {
-             //TODO Falls History leer dann minuszahl
-             // sonst mit Operator mit folgender Zahl berechnen
+                     cout << "Number: " << i << " Value: " << numbers[i] << endl;
+                     cout << "Rest: " << rest << endl;
+                 } else {
+                     result = strtod(rest, &rest);
+                     cout << "Number: " << i << " Value: " << result << endl;
+                 }
+
+                 restAsString = rest;
+                 if(!restAsString.empty()) {
+                     operand[i + 1] = rest[0];
+                     rest++;
+                 }
+
+                 //TODO Regeln beachten, wann was berechnet wird (Punkt vor Strich)
+                 if(i >= 0) {
+                     try {
+                         Calculation calc(operand[i], result, numbers[i]);
+                         result = calc.getResult();
+                     } catch(...) {
+                         /*TODO Exception weiterreichen oder abfangen und dann Rechnung stoppen oder so.
+                          * Siehe Vorlesung 4
+                          * Invalid Argmunent Exception.
+                          */
+                     }
+                     cout << "Result " << result << endl;
+                 }
+
+                 cout << "Rest nach Abschnitt: " << rest << endl;
+
+                 i++;
+                 cout << "-------------------------------------------------------------------------------" << endl;
+             } else {
+                 cout << "Rest vor Shift: " << rest << endl;
+                 operand[i + 1] = '-';
+                 rest++; //To cut the first digit (operand minus) away
+                 cout << "Rest nach Shift: " << rest << endl;
+
+                 i++;
+                 cout << "-------------------------------------------------------------------------------" << endl;
+             }
+
+         } else if (digit == '^' || digit == '*' || digit == '/' || digit == ':' || digit == '+') {
+             if (getHistory().empty()) {
+                // cout << "History leer deswegen sollte hier ein Error stehen" << endl;
+                //TODO throw error, invalid input and stop calculation
+                 //rest = "";
+                 throw std::invalid_argument("Invalid input, calculating with history without saved history.");
+
+             } else {
+                 cout << "Rest vor Shift: " << rest << endl;
+                 operand[i + 1] = rest[0];
+                 rest++; //To cut the first digit (operand minus) away
+                 cout << "Rest nach Shift: " << rest << endl;
+
+                 i++;
+                 cout << "-------------------------------------------------------------------------------" << endl;
+             }
 
          } else {
              //TODO Error keine valide Eingabe
+             throw std::invalid_argument("Invalid input.");
          }
      }
      // History: "<Input> = <Ergebnis>"
@@ -94,6 +146,10 @@ void Logic::calculate(char rest[]) {
 
 string Logic::getHistory() {
     return history;
+}
+
+double Logic::getResult() {
+    return result;
 }
 
 

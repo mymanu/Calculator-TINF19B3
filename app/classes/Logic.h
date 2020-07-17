@@ -14,6 +14,7 @@ public:
     //void divideInput(char* input);
     void calculate(char* rest);
     string getHistory();
+    double getResult();
 
 private:
     string operand[10];
