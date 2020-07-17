@@ -83,22 +83,16 @@ void Logic::calculate(char rest[]) {
      resultStream << result;
      std::string resultAsString = resultStream.str();
 
-     string historyEntry = input;
-     historyEntry.append(" = ");
-     historyEntry.append(resultAsString);
-     history[historyPosition] = historyEntry;
+     history = input;
+     history.append(" = ");
+     history.append(resultAsString);
+
      //  cout << "History Entry: " << historyEntry << endl;
-
-     historyPosition++;
-
-     if (historyPosition == 10){
-         historyPosition = 0;
-     }
 
      restAsString = rest;
 }
 
-string* Logic::getHistory() {
+string Logic::getHistory() {
     return history;
 }
 

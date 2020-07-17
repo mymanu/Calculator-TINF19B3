@@ -30,11 +30,8 @@ int main () {
 
         logic.calculate(input);
 
-        for(int i = 0; i < 10; i++){
-            if (!logic.getHistory()[i].empty()) {
-                cout << "History " << i << " Wert: " << logic.getHistory()[i] << endl;
-            }
-        }
+       // cout << "History: " << logic.getHistory() << endl;
+
 
 
         cout << "To turn off the MaMa Calculator, please enter \"off\" otherwise press ENTER" << endl;

@@ -13,14 +13,13 @@ public:
     Logic();
     //void divideInput(char* input);
     void calculate(char* rest);
-    string* getHistory();
+    string getHistory();
 
 private:
     string operand[10];
     double numbers[20];
     double result = 0;
-    string history[10];
-    int historyPosition = 0;
+    string history;
 
     int braceCounter = 0;
 
