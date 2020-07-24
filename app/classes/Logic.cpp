@@ -2,7 +2,7 @@
 // Created by manuel on 05.06.2020.
 //
 
-//TODO Logic Konstruktor leer
+// TODO Logic Konstruktor leer
 // Neue Berechnungen übegeben in public funktion
 
 #include "Logic.h"
@@ -12,8 +12,8 @@
 #include <sstream>
 using namespace std;
 
-Logic::Logic() {
-}
+Logic::Logic() {}
+
 
 void Logic::calculate(char rest[]) {
     int i = -1;

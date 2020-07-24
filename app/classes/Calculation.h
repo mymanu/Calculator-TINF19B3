@@ -12,7 +12,6 @@ public:
     Calculation(std::string operand, double pX, double pY);
     Calculation(std::string operand, double pX);
     ~Calculation();
-
     double getResult();
 private:
     double sqrt();
